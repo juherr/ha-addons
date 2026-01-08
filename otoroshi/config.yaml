@@ -1,0 +1,30 @@
+name: Otoroshi
+slug: otoroshi
+description: "Otoroshi reverse-proxy / API gateway"
+version: "1.0.0"
+startup: services
+boot: auto
+
+arch:
+  - arm64
+
+ports:
+  8080/tcp: 8080
+  8443/tcp: 8443
+
+ports_description:
+  8080/tcp: "Otoroshi HTTP"
+  8443/tcp: "Otoroshi HTTPS"
+
+options:
+  java_opts: "-Xms256m -Xmx512m"
+  storage: "file"
+  filedb_path: "/data/filedb/state.ndjson"
+  admin_password: "change-me-now"
+
+schema:
+  java_opts: str?
+  storage: list(inmemory|file|lettuce)?
+  filedb_path: str?
+  admin_password: password
+

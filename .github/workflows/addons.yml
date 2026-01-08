@@ -1,0 +1,19 @@
+name: Home Assistant Add-ons CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lint:
+    name: Lint add-ons
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Home Assistant add-on linter
+        uses: frenck/action-addon-linter@v2
+
