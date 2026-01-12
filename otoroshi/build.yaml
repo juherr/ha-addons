@@ -1,3 +1,4 @@
 build_from:
-  arm64: "eclipse-temurin:21-jre-alpine"
+  aarch64: "eclipse-temurin:21-jre-alpine"
+  armv7: "eclipse-temurin:21-jre-alpine"
 
