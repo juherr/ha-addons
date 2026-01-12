@@ -22,7 +22,7 @@ The objective is to provide **production-grade, opinionated add-ons** for **Home
 This add-on allows you to run Otoroshi **natively on Home Assistant OS** as a supervised add-on, fully integrated with the Home Assistant Supervisor lifecycle.
 
 **Key features**
-- ARM64 support (Raspberry Pi)
+- ARM support (Raspberry Pi)
 - Bounded JVM memory
 - Persistent storage via `/data`
 - Clean startup / shutdown handling
@@ -50,7 +50,8 @@ This add-on allows you to run Otoroshi **natively on Home Assistant OS** as a su
 
 ## Supported Architectures
 
-- `arm64`
+- `aarch64`
+- `armv7`
 
 This repository currently targets **Home Assistant OS on Raspberry Pi**.
 

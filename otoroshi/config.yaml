@@ -6,7 +6,8 @@ startup: services
 boot: auto
 
 arch:
-  - arm64
+  - aarch64
+  - armv7
 
 ports:
   8080/tcp: 8080
@@ -27,4 +28,3 @@ schema:
   storage: list(inmemory|file|lettuce)?
   filedb_path: str?
   admin_password: password
-
